@@ -5,8 +5,8 @@
   </head>
   <body>
     <script>
-      var guessLoop = function () {
-        var question = prompt("I am thinking of a number 1-20, can you guess it?");
+      var guessLoop = function() {
+        var question = prompt("I am thinking of a number 1-20, try and guess it!!");
         var randNum  = Math.floor((Math.random() * 20) + 1);
 
         return (question === randNum) ? alert("That's right!!") : guessLoop();
