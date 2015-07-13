@@ -6,14 +6,15 @@ var DonutShop = function (minCustHr, maxCustHr, avgDonutPC) {
   this.maxCustHr = maxCustHr;
   this.avgDonutPC = avgDonutPC;
   this.render = function () {
-    // render element for DOM
+    return this.donutPerDay();
   }
 }
 
+// return total donuts sold per hour based on 11 hours of operation
 DonutShop.prototype.donutPerHr = function () {
   var hrsArr = [];
   for(var i = 0; i < 11; i++) {
-   hrsArr.push(Math.floor(Math.random() * this.maxCustHr - this.minCustHr) + this.minCustHr);
+   hrsArr.push(Math.floor(Math.random() * this.maxCustHr - this.minCustHr) + this.minCustHr) * this.avgDonutPC;
   }
   return hrsArr;
 }
@@ -34,4 +35,4 @@ var southEnd = new DonutShop (10, 60, 2);
 var westSide = new DonutShop (5, 45, 1);
 var airPort = new DonutShop (15, 100, 2);
 
-console.log(downTown.donutPerHr(), downTown.donutPerDay());
+console.log(downTown.render());
