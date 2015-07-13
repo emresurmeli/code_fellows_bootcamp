@@ -1,19 +1,20 @@
 'use strict'
 
-var DonutShop = function (minCustHr. maxCustHr, avgDonutPC) {
+// Create a donut shop constructor
+var DonutShop = function (minCustHr, maxCustHr, avgDonutPC) {
   this.minCustHr = minCustHr;
   this.maxCustHr = maxCustHr;
   this.avgDonutPC = avgDonutPC;
   this.render = function () {
     // render element for DOM
   }
- }
+}
 
-var DonutShop.prototype.donutPerHr = function () {
+DonutShop.prototype.donutPerHr = function () {
   // create donut per hour
 }
 
-var DonutShop.prototype.donutPerDay = function () {
+DonutShop.prototype.donutPerDay = function () {
   // create donut per day
 }
 
