@@ -34,10 +34,10 @@ var DonutShop = function (name, minCustHr, maxCustHr, avgDonutPC) {
 // Return total donuts sold per hour based on 11 hours of operation
 DonutShop.prototype.donutPerHr = function() {
   var avgDonutHr = [];
-  for(var i = 0; i < 12; i++) {
-   avgDonutHr.push(Math.floor(Math.random() * this.maxCustHr - this.minCustHr) + this.minCustHr) * this.avgDonutPC;
-  }
-  return avgDonutHr;
+    for(var i = 0; i < 12; i++) {
+     avgDonutHr.push(Math.floor(Math.random() * this.maxCustHr - this.minCustHr) + this.minCustHr) * this.avgDonutPC;
+    }
+    return avgDonutHr;
 }
 
 var dT = new DonutShop ('Downtown', 10, 40, 1.5);
