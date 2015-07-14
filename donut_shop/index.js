@@ -19,15 +19,15 @@ var DonutShop = function (name, minCustHr, maxCustHr, avgDonutPC) {
     // Append hourly donut count to table
     for(var i = 0; i < donArr.length; i++) {
       var td = document.createElement('td');
-      td.innerHTML = donArr[i];
-      tr.appendChild(td);
-      total += donArr[i];
+        td.innerHTML = donArr[i];
+        tr.appendChild(td);
+        total += donArr[i];
     }
 
     // Append total count to table
     var totD = document.createElement('td');
-        totD.innerHTML = total;
-        tr.appendChild(totD);
+      totD.innerHTML = total;
+      tr.appendChild(totD);
   }
 }
 
@@ -51,4 +51,3 @@ eS.render();
 sE.render();
 wS.render();
 aP.render();
-
