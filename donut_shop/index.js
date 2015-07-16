@@ -56,11 +56,11 @@ submitButton.addEventListener('click', function() {
   newShop.render();
 })
 
-var dT = new DonutShop ('Downtown', 10, 40, 1.5);
-var eS = new DonutShop ('East Side', 5, 30, 1);
-var sE = new DonutShop ('South End', 10, 60, 2);
-var wS = new DonutShop ('West Side', 5, 45, 1);
-var aP = new DonutShop ('Air Port', 15, 100, 2);
+var dT = new DonutShop('Downtown', 10, 40, 1.5);
+var eS = new DonutShop('East Side', 5, 30, 1);
+var sE = new DonutShop('South End', 10, 60, 2);
+var wS = new DonutShop('West Side', 5, 45, 1);
+var aP = new DonutShop('Air Port', 15, 100, 2);
 
 dT.render();
 eS.render();
