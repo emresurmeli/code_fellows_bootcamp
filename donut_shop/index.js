@@ -40,6 +40,22 @@ DonutShop.prototype.donutPerHr = function() {
     return avgDonutHr;
 }
 
+// Add click event listener on "Create Shop" button
+var form         = document.getElementById('shop-form');
+var submitButton = document.getElementById('submit');
+
+submitButton.addEventListener('click', function() {
+  // Use input values to create a new DonutShop
+  var newShop = new DonutShop(
+    form.elements[0].value,
+    parseInt(form.elements[1].value),
+    parseInt(form.elements[2].value),
+    parseInt(form.elements[3].value)
+  )
+  // Use render function on newShop to append to the table
+  newShop.render();
+})
+
 var dT = new DonutShop ('Downtown', 10, 40, 1.5);
 var eS = new DonutShop ('East Side', 5, 30, 1);
 var sE = new DonutShop ('South End', 10, 60, 2);
