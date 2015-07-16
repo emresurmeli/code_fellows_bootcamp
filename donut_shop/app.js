@@ -12,7 +12,13 @@ var DonutShop = function (name, minCustHr, maxCustHr, avgDonutPC) {
     var donArr = this.donutPerHr();
     var total  = 0;
 
-    // Append new shop name to table
+    // If shop exists, just update
+    // if(table.hasChildNodes(this.name)){
+    //   var update = document.getElementById('donut-table').childNodes;
+    //   update.replaceChild("this is bulllll shieat")
+    // }
+
+    // Else, append new shop name to table
     tr.innerHTML = this.name;
     table.appendChild(tr);
 
@@ -48,9 +54,9 @@ submitButton.addEventListener('click', function() {
   // Use input values to create a new DonutShop
   var newShop = new DonutShop(
     form.elements[0].value,
-    form.elements[1].value,
-    form.elements[2].value,
-    form.elements[3].value
+    parseInt(form.elements[1].value),
+    parseInt(form.elements[2].value),
+    parseInt(form.elements[3].value)
   )
   // Use render function on newShop to append to the table
   newShop.render();

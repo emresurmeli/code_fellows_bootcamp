@@ -1,0 +1,18 @@
+/*body {
+  background-image: url(http://previews.123rf.com/images/sntpzh/sntpzh1308/sntpzh130800181/21523925-Seamless-pattern-with-donuts-Stock-Vector.jpg);
+  opacity: 50;
+}*/
+
+h1 {
+  text-align: center;
+}
+
+#donut-table {
+  margin: 50px auto;
+}
+
+#shop-form {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}

@@ -2,35 +2,54 @@
 <html lang="eng">
 <head>
   <title>Donut Shop Stats</title>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.cyan-indigo.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <table id="donut-table" style="border: 1px solid black">
-    <th>Shops</th>
-    <th>7am</th>
-    <th>8am</th>
-    <th>9am</th>
-    <th>10am</th>
-    <th>11am</th>
-    <th>12pm</th>
-    <th>1pm</th>
-    <th>2pm</th>
-    <th>3pm</th>
-    <th>4pm</th>
-    <th>5pm</th>
-    <th>6pm</th>
-    <th>Total</th>
+  <h1>DONUT SHOPS</h1>
+  <table id="donut-table" class="mdl-data-table mdl-js-data-table">
+    <thead>
+      <th>Shops</th>
+      <th>7am</th>
+      <th>8am</th>
+      <th>9am</th>
+      <th>10am</th>
+      <th>11am</th>
+      <th>12pm</th>
+      <th>1pm</th>
+      <th>2pm</th>
+      <th>3pm</th>
+      <th>4pm</th>
+      <th>5pm</th>
+      <th>6pm</th>
+      <th>Total</th>
+    </thead>
   </table>
   <form id="shop-form">
-    Shop Name:
-      </br><input type="text"></br>
-    Minimum Customers per Hour:
-      </br><input type="text"></br>
-    Maximum Customers per Hour:
-      </br><input type="text"></br>
-    Average Donut per Customer:
-      </br><input type="text"></br>
-    <input type="button" id="submit" value="Create Shop">
+    <h5>ADD NEW DONUT SHOP!</h5>
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" id="input"/>
+      <label class="mdl-textfield__label">Shop Name..</label>
+    </div></br>
+    <div class="mdl-textfield mdl-js-textfield textfield-demo">
+      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="input" />
+      <label class="mdl-textfield__label">Minimum Customers per Hour..</label>
+      <span class="mdl-textfield__error">Input is not a number!</span>
+    </div></br>
+    <div class="mdl-textfield mdl-js-textfield textfield-demo">
+      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+      <label class="mdl-textfield__label">Maximum Customers per Hour..</label>
+      <span class="mdl-textfield__error">Input is not a number!</span>
+    </div></br>
+    <div class="mdl-textfield mdl-js-textfield textfield-demo">
+      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+      <label class="mdl-textfield__label">Average Donut per Customer..</label>
+      <span class="mdl-textfield__error">Input is not a number!</span>
+    </div></br></br>
+    <button type="button" id="sub" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Create Shop</button>
   </form>
-  <script src="index.js"></script>
+  <script src="app.js"></script>
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
 </body>
 </html>
