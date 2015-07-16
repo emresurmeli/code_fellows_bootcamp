@@ -12,13 +12,7 @@ var DonutShop = function (name, minCustHr, maxCustHr, avgDonutPC) {
     var donArr = this.donutPerHr();
     var total  = 0;
 
-    // If shop exists, just update
-    // if(table.hasChildNodes(this.name)){
-    //   var update = document.getElementById('donut-table').childNodes;
-    //   update.replaceChild("this is bulllll shieat")
-    // }
-
-    // Else, append new shop name to table
+    // Append new shop name to table
     tr.innerHTML = this.name;
     table.appendChild(tr);
 
