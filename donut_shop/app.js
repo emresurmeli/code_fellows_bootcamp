@@ -12,7 +12,19 @@ var DonutShop = function (name, minCustHr, maxCustHr, avgDonutPC) {
     var donArr = this.donutPerHr();
     var total  = 0;
 
-    // Append new shop name to table
+    // If shop exists, just update
+    if(document.getElementById(this.name)) {
+      var updt = document.getElementById(this.name).childNodes;
+
+      for(var i = 0; i < donArr.length; i++) {
+        updt[i].innerHTML = donArr[i];
+        total += donArr[i];
+      }
+      updt[updt.length - 1].innerHTML = total;
+    } else {
+
+    // Else, append new shop name to table
+    tr.id = this.name;
     tr.innerHTML = this.name;
     table.appendChild(tr);
 
@@ -28,6 +40,7 @@ var DonutShop = function (name, minCustHr, maxCustHr, avgDonutPC) {
     var totD = document.createElement('td');
       totD.innerHTML = total;
       tr.appendChild(totD);
+    }
   }
 }
 
@@ -37,7 +50,7 @@ DonutShop.prototype.donutPerHr = function() {
     for(var i = 0; i < 12; i++) {
      avgDonutHr.push(Math.floor(Math.random() * this.maxCustHr - this.minCustHr) + this.minCustHr) * this.avgDonutPC;
     }
-    return avgDonutHr;
+  return avgDonutHr;
 }
 
 // Add click event listener on "Create Shop" button
