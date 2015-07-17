@@ -16,10 +16,10 @@ var DonutShop = function (name, minCustHr, maxCustHr, avgDonutPC) {
     if(document.getElementById(this.name)) {
       var updt = document.getElementById(this.name).childNodes;
 
-      for(var i = 0; i < donArr.length; i++) {
-        console.log(i + donArr[i])
-        updt[i].innerHTML = donArr[i];
-        total += donArr[i];
+      for(var i = 1; i < updt.length - 1; i++) {
+        console.log(i + ' ' + donArr[i])
+        updt[i].innerHTML = donArr[i - 1];
+        total += donArr[i - 1];
       }
       updt[updt.length - 1].innerHTML = total;
     } else {
