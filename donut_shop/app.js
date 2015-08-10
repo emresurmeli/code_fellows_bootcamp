@@ -16,14 +16,15 @@ var DonutShop = function (name, minCustHr, maxCustHr, avgDonutPC) {
     if(document.getElementById(this.name)) {
       var updt = document.getElementById(this.name).childNodes;
 
-      for(var i = 1; i < updt.length - 1; i++) {
-        updt[i].innerHTML = donArr[i - 1];
-        total += donArr[i - 1];
+      for(var i = 0; i < donArr.length; i++) {
+        console.log(i + donArr[i])
+        updt[i].innerHTML = donArr[i];
+        total += donArr[i];
       }
       updt[updt.length - 1].innerHTML = total;
-    // Else, append new shop name to table
     } else {
 
+    // Else, append new shop name to table
     tr.id = this.name;
     tr.innerHTML = this.name;
     table.appendChild(tr);
@@ -31,15 +32,15 @@ var DonutShop = function (name, minCustHr, maxCustHr, avgDonutPC) {
     // Append hourly donut count to table
     for(var i = 0; i < donArr.length; i++) {
       var td = document.createElement('td');
-          td.innerHTML = donArr[i];
-          tr.appendChild(td);
-          total += donArr[i];
+        td.innerHTML = donArr[i];
+        tr.appendChild(td);
+        total += donArr[i];
     }
 
     // Append total count to table
     var totD = document.createElement('td');
-        totD.innerHTML = total;
-        tr.appendChild(totD);
+      totD.innerHTML = total;
+      tr.appendChild(totD);
     }
   }
 }
