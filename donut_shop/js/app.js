@@ -72,4 +72,3 @@ var eS = new DonutShop('East Side', 5, 30, 1).renderToDOM();
 var sE = new DonutShop('South End', 10, 60, 2).renderToDOM();
 var wS = new DonutShop('West Side', 5, 45, 1).renderToDOM();
 var aP = new DonutShop('Air Port', 15, 100, 2).renderToDOM();
-
